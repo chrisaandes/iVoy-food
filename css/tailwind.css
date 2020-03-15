@@ -3,3 +3,24 @@
 @tailwind componennts;
 
 @tailwind utilities;
+
+.form-input {
+    @apply w-full leading-snug py-1 px-4 rounded text-gray-800  bg-gray-200 border border-blue-300;
+}
+
+
+.form-input:hover {
+    @apply bg-white;        
+}
+
+.form-input:focus {
+    @apply outline-none shadow-outline;
+}
+
+.btn {
+    @apply px-4 py-1 shadow-xl rounded-lg text-white bg-secondary mx-auto block;
+}
+
+.btn:hover {
+    @apply shadow-none bg-primary;
+}
