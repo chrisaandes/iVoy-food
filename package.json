@@ -21,7 +21,11 @@
   "homepage": "https://github.com/chrisaandes/iVoy-food#readme",
   "dependencies": {
     "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
     "postcss-cli": "^7.1.0",
     "tailwindcss": "^1.2.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0"
   }
 }
