@@ -8,6 +8,10 @@ module.exports = {
       extend: {
         colors: {
           cyan: '#9cdbff',
+          primary: "#9254a0",
+          secondary: "#5886db",
+          tertiary: "#00a2e2"
+
         },
         margin: {
           '96': '24rem',
