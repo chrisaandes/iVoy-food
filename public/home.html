@@ -6,40 +6,45 @@
     <title>Header</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 <body>
-    <nav class="fixed z-10 w-full bg-tertiary ">
+    <nav x-data="{open:false}" class="fixed z-10 w-full bg-tertiary ">
         <div class="p-2  text-white flex justify-between items-center">
             <div>
                 <img width="100" class="px-2" src="images/logo.png">
             </div>
-            <div class="text-2xl">&equiv;</div>
+            <div class="text-2xl" @click="open=true">&equiv;</div>
         </div>
 
-        <div class="p-4 mt-4">
-            <input class="form-input" type="search" placeholder="Busqueda">
+        <div x-show="open" @click.away="open=false">
+            <div class="mt-1 mx-2">
+                <input class="form-input" type="search" placeholder="Busqueda">
+            </div>
+    
+            <div class="py-1 mx-2 md:flex justify-between text-white"> 
+                <div class="flex ">
+                    Precio:
+                    <div class="ml-2">$</div>
+                    <div class="ml-2 text-primary">$$</div>
+                    <div class="ml-2">$$$</div>
+                    <div class="ml-2">$$$$</div>
+                </div>
+    
+                <div class="flex ">
+                    Calificación:
+                    <div class="ml-2">&starf;&starf;&starf;&starf;&starf;</div>
+                </div>
+    
+                <div>
+                    <button class="btn bg-primary">Filtrar</button>
+                </div>
+                
+                
+            </div>
         </div>
 
-        <div class="py-1 mx-2 md:flex justify-between text-white"> 
-            <div class="flex ">
-                Precio:
-                <div class="ml-2">$</div>
-                <div class="ml-2 text-primary">$$</div>
-                <div class="ml-2">$$$</div>
-                <div class="ml-2">$$$$</div>
-            </div>
-
-            <div class="flex ">
-                Calificación:
-                <div class="ml-2">&starf;&starf;&starf;&starf;&starf;</div>
-            </div>
-
-            <div>
-                <button class="btn bg-primary">Filtrar</button>
-            </div>
-            
-            
-        </div>
+        
 
         
 
