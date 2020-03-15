@@ -18,7 +18,7 @@
 }
 
 .btn {
-    @apply px-4 py-1 shadow-xl rounded-lg text-white bg-secondary mx-auto block;
+    @apply px-4 py-1 shadow-xl rounded-lg text-white block;
 }
 
 .btn:hover {
